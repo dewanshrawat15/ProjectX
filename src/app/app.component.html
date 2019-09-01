@@ -1,0 +1,28 @@
+<app-menu></app-menu>
+
+
+<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap" rel="stylesheet">
+<div class="background">
+  <br><br><br>
+  <h2 class="leaderboard text-center">Leaderboard</h2>       
+  <br>     
+  <table class="container table">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Username</th>
+        <th>Likes</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let participant of participants;let i=index">
+       <tr> 
+      <td>{{'#'+(i+1)}}</td>
+        <td>{{participant.username | capital}}</td>
+        <td>{{participant.likes | number}}</td>
+      </tr>
+     
+      
+    </tbody>
+  </table>
+
+</div>
